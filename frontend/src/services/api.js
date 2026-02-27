@@ -4,7 +4,7 @@ export const BASE_URL =
   process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: `${BASE_URL}/api`,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
