@@ -18,7 +18,12 @@ const app = express();
 //   })
 // );
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://cms-frontend-awgn.onrender.com",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
